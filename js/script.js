@@ -2,7 +2,10 @@ $(document).ready(function() {
   var mese = 1;
   var url = 'https://flynn.boolean.careers/exercises/api/holidays?year=2018&month='+ (mese-1);
   calcoloMesi(mese);
-  $()
+  $('input').click(function(){
+
+  });
+  // chiamata ajax
   $.ajax (
     {
       url: url,
@@ -25,7 +28,7 @@ $(document).ready(function() {
 
 });
 
-
+// funzione generica che vale per tutti i mesi
 function calcoloMesi (mese) {
   var giorniDelMese = moment("2018-" + mese).daysInMonth();
   for (var i = 0; i < giorniDelMese; i++) {
